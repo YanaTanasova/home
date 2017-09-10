@@ -1,0 +1,66 @@
+/* footer */
+
+.footer
+	padding-bottom: 70px
+
+	&__container
+		display: flex
+		align-items: center
+
+	&__contacts
+		font-family: $main-text-font
+		@include rem(14)
+		color: $text-color
+
+	&__span a
+		color: $text-color
+
+	&__span:first-child
+		padding-right: 20px
+		&:after
+			content: '/'
+			color: #c2c2c2
+			padding-left: 20px
+
+
+.social
+	margin: 0 auto
+
+	&__list
+		font-size: 0
+
+	&__item
+		display: inline-block
+		border: solid 1px #d6d6d6
+		transition: border-color .3s
+
+		&:nth-child(2)
+			border-right: none
+			border-left: none
+
+		&:hover
+			border-color: $acc-color
+
+	&__link
+		width: 60px
+		height: 60px
+		display: block
+		transition: background-color .3s
+
+		&:hover
+			background-color: $acc-color
+			
+		
+
+		&--fb
+			background: url(../img/facebook.png) no-repeat center center
+		&--tw
+			background: url(../img/twitter.png) no-repeat center center
+		&--pt
+			background: url(../img/pinterest.png) no-repeat center center
+
+.copyright
+	font-family: $main-text-font
+	color: rgba(51, 51, 51, 0.5)
+	@include rem(12)
+	margin-left: auto

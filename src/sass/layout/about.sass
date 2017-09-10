@@ -1,0 +1,75 @@
+/* about */
+
+.about
+	padding: 90px 0 0 0
+	background: #f0f0f0
+
+	&__subtitle
+		text-align: center
+		max-width: 850px
+		margin: 30px auto 0 auto
+
+	&__img-wrap
+		max-width: 770px
+		margin: 50px auto 0 auto
+		position: relative
+
+		&:after
+			content: ''
+			display: block
+			width: 40px
+			height: 46px
+			@include posCenter
+			background: url(../img/play-icon.png)
+			cursor: pointer
+
+	&__desc
+		display: flex
+		margin-top: -120px
+		padding: 0 100px 0 0
+
+	&__quote
+		width: 630px
+		padding: 185px 70px 65px 0
+		position: relative
+
+		&:before
+			content: ''
+			display: block
+			width: 41px
+			height: 28px
+			position: absolute
+			top: 88px
+			left: 100px
+			background: url(../img/quote-icon.png)
+	
+	&__text
+		width: 570px
+		background: #fff
+		padding: 185px 63px 65px 58px
+
+.quote
+	&__avatar
+		width: 70px
+		height: 70px
+		border-radius: 50%
+		background: url(../img/avatar.png) no-repeat center center
+		display: inline-block
+		vertical-align: top
+
+	&__desc
+		@include rem(22)
+		line-height: 1.55
+		
+		&-wrap
+			display: inline-block
+			width: calc(98% - 70px)
+			vertical-align: top
+			padding-left: 29px
+.author
+	font-family: $title-font
+	color: rgba(121, 121, 121, 0.5)
+	margin-top: 55px
+	text-transform: uppercase
+
+
