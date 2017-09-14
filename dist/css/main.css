@@ -766,7 +766,7 @@ a {
     .services__item:hover .card__back-side {
       -webkit-transform: rotateY(0deg);
       transform: rotateY(0deg); }
-    @media screen and (max-width: 1200px) {
+    @media screen and (max-width: 1220px) {
       .services__item {
         width: 320px;
         height: 360px; } }
