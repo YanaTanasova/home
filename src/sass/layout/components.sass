@@ -1,0 +1,139 @@
+@import "../misc/_mixin.sass"
+@import "../fonts/fonts.css"
+
+$container-width: 1200px
+$section-title-font: 'Oswald Bold', sans-serif
+$logo-font: 'Porter Bold', sans-serif
+$main-text-font: 'Montserrat Light', sans-serif
+$title-font: 'Montserrat Bold', sans-serif
+$desc-font: 'Montserrat Regular', sans-serif
+$text-color: #333
+$acc-color: #5cf1be
+
+*
+	box-sizing: border-box
+
+html, body
+	margin: 0
+	padding: 0
+
+h1, h2, h3, h4, h5, h6, p, ul, li
+	margin: 0
+	padding: 0
+
+ul
+	list-style: none
+
+a
+	text-decoration: none
+
+.container
+	max-width: $container-width
+	padding: 0 15px
+	margin: 0 auto
+	position: relative
+	height: 100%
+
+	@include media(400px)
+		padding: 0 10px
+
+.container-flex
+	display: flex
+	height: 100%
+	align-items: center
+
+.title
+	font-family: $title-font
+	color: $text-color
+	@include rem(48)
+	font-weight: normal
+
+	@include media(778px)
+		@include rem(42)
+
+	@include media(576px)
+		@include rem(36)
+
+.btn
+	font-family: $section-title-font
+	@include rem(14)
+	letter-spacing: 1.7px
+	color: $text-color
+	border: none
+	text-transform: uppercase
+	background: $acc-color
+	padding: 15px 33px 12px 33px
+	border: 2px solid $acc-color
+	transition: all .3s
+	display: inline-block
+
+	@include media(778px)
+		padding: 15px 25px 12px 25px
+
+	&:hover
+		background: transparent
+		color: #fff
+
+.section-title
+	font-family: $section-title-font
+	@include rem(14)
+	letter-spacing: .12rem
+	color: $acc-color
+	text-align: center
+	font-weight: normal
+	text-transform: uppercase
+
+.section-title--left
+	text-align: left
+
+.desc
+	font-family: $desc-font
+	@include rem(28)
+	color: $text-color
+	line-height: 1.43
+
+	@include media(1200px)
+		@include rem(24)
+
+	@include media(996px)
+		@include rem(22)
+
+	@include media(778px)
+		@include rem(18)
+
+	@include media(470px)
+		@include rem(16)
+
+.text
+	font-family: $main-text-font
+	@include rem(16)
+	line-height: 1.75
+	color: $text-color
+	margin-top: 35px
+
+	@include media(778px)
+		@include rem(15)
+		margin-top: 20px
+	
+	&:first-child
+		margin-top: 0
+
+.arrow-down
+	position: absolute
+	bottom: 25px
+	background: url(../img/arrow_down.png) no-repeat left center
+	width: 96px
+	padding-left: 43px
+	opacity: .25
+	transition: opacity .3s
+
+	&__text
+		font-family: $section-title-font
+		@include rem(13)
+		letter-spacing: 1.6px
+		color: #fff
+		text-transform: uppercase
+
+	&:hover
+		cursor: pointer
+		opacity: .6

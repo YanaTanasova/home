@@ -4,12 +4,14 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<title>Document</title>
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 <body>
 
 	<!-- header -->
-	<header class="header">
+	<header class="header" id="js--header">
 
 		<div class="container header-container">
 			
@@ -21,28 +23,33 @@
 			</div><!-- ./logo -->
 
 			<!-- nav -->
-			<nav class="nav">
-				<ul class="nav__list">
+			<nav class="nav" id="js--nav">
+				<ul class="nav__list" id="js--nav__list">
 					<li class="nav__item">
-						<a href="#" class="nav__link">About</a>
+						<a href="#js--about" class="nav__link">About</a>
 					</li>
 
 					<li class="nav__item">
-						<a href="#" class="nav__link">Portfolio</a>
+						<a href="#portfolio" class="nav__link">Portfolio</a>
 					</li>
 
 					<li class="nav__item">
-						<a href="#" class="nav__link">Services</a>
+						<a href="#services" class="nav__link">Services</a>
 					</li>
 
 					<li class="nav__item">
-						<a href="#" class="nav__link">Clients</a>
+						<a href="#clients" class="nav__link">Clients</a>
 					</li>
 
 					<li class="nav__item">
-						<a href="#" class="nav__link">Contact</a>
+						<a href="#contact" class="nav__link">Contact</a>
 					</li>
 				</ul>
+
+				<div class="responsive-btn" id="js--responsive-btn">
+					<i class="material-icons responsive-btn__icon">menu</i>
+				</div>
+
 			</nav><!-- ./nav -->
 		</div>
 	</header><!-- ./header -->
@@ -54,7 +61,7 @@
 		<main class="main">
 			
 			<!-- top-slider -->
-			<div class="top-slider">
+			<div class="top-slider" id="js--top-slider">
 
 				<div class="container container-flex">
 
@@ -68,14 +75,14 @@
 						</div>
 					</div>
 
-					<div class="arrow-down">
+					<div class="arrow-down" id="js--arrow-down">
 						<span class="arrow-down__text">Scroll down</span>
 					</div>
 				</div>
 			</div><!-- ./top-slider -->
 
 			<!-- about -->
-			<section class="about">
+			<section class="about" id="js--about">
 
 				<div class="container">
 
@@ -111,7 +118,7 @@
 			</section><!-- ./about -->
 
 			<!-- portfolio -->
-			<section class="portfolio">
+			<section class="portfolio" id="portfolio">
 
 				<div class="container portfolio__container">
 
@@ -187,9 +194,9 @@
 			</section><!-- ./portfolio -->
 
 			<!-- services -->
-			<section class="services">
+			<section class="services" id="services">
 
-				<div class="container container-flex">
+				<div class="container container-flex services__container">
 
 					<!-- services__desc-wrap -->
 					<div class="services__desc-wrap">
@@ -211,12 +218,17 @@
 						<li class="services__item">
 				
 							<div class="card__main-side">
+				
 								<img class="card__img" src="img/pencil_ruller_icon.png">
 								<h3 class="card__title">Design</h3>
+
 							</div>
 
-							<div class="card__back-side">
-								<p class="back-side__desc">Our main goal is to give each project its own creative and unique solution. We help to establish brands, build</p>
+							<div class="card__back-side card__back-side--center">
+
+								<img class="card__img" src="img/pencil_ruller_icon.png">
+
+								<p class="text back-side__desc back-side__desc--center">Our main goal is to give each project its own creative and unique solution. We help to establish brands, build</p>
 							</div>
 						</li><!-- ./services__item -->
 
@@ -232,7 +244,7 @@
 
 								<h4 class="back-side__title">Briefly what we can offer you</h4>
 
-								<p class="back-side__desc">Our main goal is to give each project its own creative and unique solution.</p>
+								<p class="text back-side__desc">Our main goal is to give each project its own creative and unique solution.</p>
 
 								<ul class="back-side__list">
 									<li class="back-side__item">Web Development</li>
@@ -251,8 +263,11 @@
 								<h3 class="card__title">Illustration</h3>
 							</div>
 
-							<div class="card__back-side">
-								<p class="back-side__desc">Our main goal is to give each project its own creative and unique solution. We help to establish brands, build</p>
+							<div class="card__back-side card__back-side--center">
+
+								<img class="card__img" src="img/vector_bezier_curve_icon.png">
+
+								<p class="text back-side__desc back-side__desc--center">Our main goal is to give each project its own creative and unique solution. We help to establish brands, build</p>
 							</div>
 						</li><!-- ./services__item -->
 
@@ -264,8 +279,11 @@
 								<h3 class="card__title">3D Modeling</h3>
 							</div>
 
-							<div class="card__back-side">
-								<p class="back-side__desc">Our main goal is to give each project its own creative and unique solution. We help to establish brands, build</p>
+							<div class="card__back-side card__back-side--center">
+
+								<img class="card__img" src="img/dimensions_object_coordinate_icon.png">
+								
+								<p class="text back-side__desc back-side__desc--center">Our main goal is to give each project its own creative and unique solution. We help to establish brands, build</p>
 							</div>
 						</li><!-- ./services__item -->
 
@@ -287,7 +305,7 @@
 			</div><!-- ./big-img -->
 
 			<!-- testimonials -->
-			<section class="testimonials">
+			<section class="testimonials" id="clients">
 
 				<div class="container">
 					<h3 class="section-title">Clients say</h3>
@@ -348,7 +366,7 @@
 			</section><!-- ./testimonials -->
 			
 			<!-- contacts -->
-			<section class="contacts">
+			<section class="contacts" id="contact">
 
 				<div class="map">
 					<img src="">
@@ -396,5 +414,8 @@
 		</div>
 	</footer><!-- ./footer -->
 
+
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/custom.js"></script>
 </body>
 </html>

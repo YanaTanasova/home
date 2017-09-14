@@ -1,4 +1,0 @@
-[2017-09-07 14:41:15] layer "+1 895.625.984.886     /      info@evatheme.com": Expected Either a default asset specification or a layer asset specification but "+" found.
-[2017-09-07 14:41:15] layer "kaboompics.com_Women's working space": Expected end of input but "_" found.
-[2017-09-07 14:41:15] layer "kaboompics.com_Young woman thinking with pen while working - studying at her desk": Expected end of input but "_" found.
-[2017-09-07 14:41:15] layer "+": Expected Either a default asset specification or a layer asset specification but "+" found.

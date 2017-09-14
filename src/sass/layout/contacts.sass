@@ -9,6 +9,15 @@
 	&__desc-wrap
 		padding: 90px 0
 		text-align: center
+
+		@include media(996px)
+			padding: 60px 0
+
+		@include media(778px)
+			padding: 40px 0
+
+		@include media(400px)
+			padding-bottom: 20px
 	
 	&__title
 		margin-top: 20px
@@ -18,4 +27,14 @@
 		margin: 30px auto 0 auto
 		@include rem(22)
 
+		@include media(996px)
+			@include rem(20)
+			max-width: 500px
+
+		@include media(778px)
+			@include rem(18)
+
+		@include media(470px)
+			@include rem(16)
+			margin-top: 20px
 

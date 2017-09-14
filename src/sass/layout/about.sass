@@ -4,10 +4,25 @@
 	padding: 90px 0 0 0
 	background: #f0f0f0
 
+	@include media(996px)
+		padding: 60px 0 0 0
+
+	@include media(778px)
+		padding: 40px 0 0 0
+
 	&__subtitle
 		text-align: center
 		max-width: 850px
 		margin: 30px auto 0 auto
+
+		@include media(996px)
+			max-width: 800px
+
+		@include media(778px)
+			max-width: 600px
+
+		@include media(470px)
+			margin-top: 20px
 
 	&__img-wrap
 		max-width: 770px
@@ -20,18 +35,55 @@
 			width: 40px
 			height: 46px
 			@include posCenter
-			background: url(../img/play-icon.png)
+			background: url(../img/play-icon.png) no-repeat center center
 			cursor: pointer
+
+		@include media(1200px)
+			max-width: 700px
+
+		@include media(778px)
+			margin: 30px auto 0 auto
+
+
+	&__img
+		width: 100%
 
 	&__desc
 		display: flex
 		margin-top: -120px
 		padding: 0 100px 0 0
 
+		@include media(1200px)
+			padding: 0 20px 0 0
+
+		@include media(996px)
+			padding: 0 5px 0 0
+
+		@include media(778px)
+			padding: 0
+
+		@include media(680px)
+			flex-direction: column
+			padding-bottom: 10px
+
 	&__quote
 		width: 630px
 		padding: 185px 70px 65px 0
 		position: relative
+
+		@include media(1048px)
+			padding: 185px 20px 65px 40px
+
+		@include media(996px)
+			padding: 155px 20px 45px 40px
+
+		@include media(778px)
+			padding: 155px 20px 45px 0
+
+		@include media(680px)
+			padding: 155px 20px 20px 0
+			width: 100%
+
 
 		&:before
 			content: ''
@@ -41,12 +93,33 @@
 			position: absolute
 			top: 88px
 			left: 100px
-			background: url(../img/quote-icon.png)
+			background: url(../img/quote-icon.png) no-repeat center center
+			background-size: cover
+
+			@include media(1048px)
+				top: 135px
+
+			@include media(996px)
+				width: 28px
+				height: 19px
+
+			@include media(778px)
+				display: none
 	
 	&__text
 		width: 570px
 		background: #fff
 		padding: 185px 63px 65px 58px
+
+		@include media(996px)
+			padding: 155px 43px 45px 38px
+
+		@include media(778px)
+			padding: 155px 20px 45px 20px
+			width: 100%
+
+		@include media(680px)
+			padding: 20px
 
 .quote
 	&__avatar
@@ -54,22 +127,52 @@
 		height: 70px
 		border-radius: 50%
 		background: url(../img/avatar.png) no-repeat center center
+		background-size: cover
 		display: inline-block
 		vertical-align: top
+
+		@include media(778px)
+			width: 50px
+			height: 50px			
 
 	&__desc
 		@include rem(22)
 		line-height: 1.55
-		
+
+		@include media(1200px)
+			@include rem(20)
+
+		@include media(996px)
+			@include rem(18)
+
+		@include media(778px)
+			@include rem(16)
+
 		&-wrap
 			display: inline-block
 			width: calc(98% - 70px)
 			vertical-align: top
 			padding-left: 29px
+
+			@include media(778px)
+				padding-left: 15px
+
+			@include media(778px)
+				width: calc(98% - 50px)
+
 .author
 	font-family: $title-font
 	color: rgba(121, 121, 121, 0.5)
 	margin-top: 55px
 	text-transform: uppercase
+
+	@include media(1200px)
+		margin-top: 25px
+
+	@include media(996px)
+		@include rem(15)
+
+	@include media(778px)
+		@include rem(14)
 
 

@@ -1,133 +1,37 @@
-@import "../misc/_mixin.sass"
-@import "../fonts/fonts.css"
-
-$container-width: 1200px
-$section-title-font: 'Oswald Bold', sans-serif
-$logo-font: 'Porter Bold', sans-serif
-$main-text-font: 'Montserrat Light', sans-serif
-$title-font: 'Montserrat Bold', sans-serif
-$desc-font: 'Montserrat Regular', sans-serif
-$text-color: #333
-$acc-color: #5cf1be
-
-*
-	box-sizing: border-box
-
-html, body
-	margin: 0
-	padding: 0
-
-h1, h2, h3, h4, h5, h6, p, ul, li
-	margin: 0
-	padding: 0
-
-ul
-	list-style: none
-
-a
-	text-decoration: none
-
-.container
-	width: $container-width
-	padding: 0 15px
-	margin: 0 auto
-	position: relative
-	height: 100%
-
-.container-flex
-	display: flex
-	height: 100%
-	align-items: center
-
-.title
-	font-family: $title-font
-	color: $text-color
-	@include rem(48)
-	font-weight: normal
-
-.btn
-	font-family: $section-title-font
-	@include rem(14)
-	letter-spacing: 1.7px
-	color: $text-color
-	border: none
-	text-transform: uppercase
-	background: $acc-color
-	padding: 15px 33px 12px 33px
-	border: 2px solid $acc-color
-	transition: all .3s
-	display: inline-block
-
-	&:hover
-		background: transparent
-		color: #fff
-
-.section-title
-	font-family: $section-title-font
-	@include rem(14)
-	letter-spacing: .12rem
-	color: $acc-color
-	text-align: center
-	font-weight: normal
-	text-transform: uppercase
-
-.section-title--left
-	text-align: left
-
-.desc
-	font-family: $desc-font
-	@include rem(28)
-	color: $text-color
-	line-height: 1.43
-
-.text
-	font-family: $main-text-font
-	@include rem(16)
-	line-height: 1.75
-	color: $text-color
-	margin-top: 35px
-	
-	&:first-child
-		margin-top: 0
-
-.arrow-down
-	position: absolute
-	bottom: 25px
-	background: url(../img/arrow_down.png) no-repeat left center
-	width: 96px
-	padding-left: 43px
-	opacity: .25
-	transition: opacity .3s
-
-	&__text
-		font-family: $section-title-font
-		@include rem(13)
-		letter-spacing: 1.6px
-		color: #fff
-		text-transform: uppercase
-
-	&:hover
-		cursor: pointer
-		opacity: .6
 
 
 /* header */
 
 .header
-	position: fixed
+	position: absolute
 	z-index: 999
 	width: 100%
 	border-bottom: 1px solid rgba(255, 255, 255, .1)
+	transition: all .3s
 
 	&-container
 		display: flex
 		align-items: center
 
-.header-fixed
-	background: rgba(31, 31, 31, .95)
+	&--fixed
+		position: fixed
+		background: rgba(31, 31, 31, .95)
+		border-bottom: none
 	
-	.logo
-		padding: 0 16px
+		.logo
+			padding: 16px 0
+
+		.nav
+			&__item:after
+				display: none
+
+			&__link:hover
+				color: $acc-color
+			
+			&__list
+				@include media(700px)
+				top: 52px
+
 
 /* logo */
 
@@ -148,6 +52,15 @@ a
 
 .nav
 	margin-left: auto
+	position: relative
+
+	&__list
+		@include media(700px)
+			display: none
+			position: absolute
+			top: 61px
+			right: 0
+			background: rgba(31, 31, 31, .95)
 
 	&__item
 		@include rem(13)
@@ -160,6 +73,13 @@ a
 		&:not(:last-child)
 			margin-right: 65px
 
+			@include media(996px)
+				margin-right: 35px
+
+		@include media(700px)
+			display: block
+			padding: 17px
+
 		&:after
 			content: ''
 			display: block
@@ -170,15 +90,32 @@ a
 			bottom: -5px
 			transition: width .3s
 
+			@include media(700px)
+				display: none
+
 		&:hover:after
 			width: 25px
-
 		
 	&__link
 		color: #fff
+		transition: color .3s
 
-		
-			
+		&:active
+			color: $acc-color
+
+
+.responsive-btn
+	display: none
+	cursor: pointer
+
+	@include media(700px)
+		display: block
+
+	&__icon
+		color: #fff
+		@include rem(40)
+	
+	
 
 		
 		

@@ -4,11 +4,22 @@
 	padding: 100px 0
 	background: #f0f0f0
 
+	@include media(998px)
+		padding: 60px 0
+
+	@include media(778px)
+		padding: 40px 0
+
 	&__container
-		display: flex
+
+		@include media(998px)
+			flex-direction: column
 
 	&__btn-wrap
 		margin-top: 40px
+
+		@include media(998px)
+			margin-top: 20px
 	
 	&__btn:hover
 		color: $acc-color
@@ -21,25 +32,52 @@
 		line-height: 1.55
 		margin-top: 20px
 
+		@include media(1095px)
+			@include rem(18)
+
+		@include media(778px)
+			@include rem(16)
+
 		&-wrap
 			max-width: 400px
-			padding-right: 50px
+			padding-right: 10px
+
+			@include media(1095px)
+				max-width: 280px
+				padding-right: 10px
+
+			@include media(998px)
+				max-width: 669px
+				padding-right: 100px
+
+			@include media(778px)
+				padding-right: 150px
+
+			@include media(470px)
+				padding-right: 0
 	
 	&__list
 		width: 770px
 		display: flex
 		flex-wrap: wrap
+		justify-content: flex-end
 
+		@include media(1200px)
+			width: 80%
+
+		@include media(998px)
+			width: 100%
+			justify-content: center
+			margin-top: 25px
 
 	&__item
 		width: 370px
 		height: 410px
-		background: #fff
+		perspective: 1000px
 		margin-right: 30px
 		margin-top: 30px
-		display: flex
-		align-items: center
-		justify-content: center
+		position: relative
+		cursor: pointer
 
 		&:nth-child(2n)
 			margin-right: 0
@@ -48,22 +86,140 @@
 		&:nth-child(2)
 			margin-top: 0
 
-	.card
-		&__main-side
-			text-align: center
+		&:nth-child(2)
+			@include media(717px)
+				margin-top: 30px
 
+		&:hover .card__main-side
+			transform: rotateY(180deg)
+
+		&:hover .card__back-side
+			transform: rotateY(0deg)
+
+		@include media(1200px)
+			width: 320px
+			height: 360px
+
+		@include media(717px)
+			width: 460px
+			height: 280px
+			margin-right: 0
+
+		@include media(576px)
+			width: 100%
+
+
+	.card
+
+		&__main-side
+			display: flex
+			align-items: center
+			justify-content: center
+			flex-direction: column
+			text-align: center
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			backface-visibility: hidden
+			transition: transform .5s
+			background: #fff
 
 		&__img
 			display: inline-block
+
+			@include media(778px)
+				width: 64px
 
 		&__title
 			font-family: $desc-font
 			@include rem(28)
 			color: $text-color
 			margin-top: 25px
+			font-weight: normal
 
-			
+			@include media(778px)
+				@include rem(24)
 
-.card__back-side
-	display: none
+		&__back-side
+			position: absolute
+			top: 0
+			left: 0
+			width: 100%
+			height: 100%
+			backface-visibility: hidden
+			transition: transform .5s
+			transform: rotateY(-180deg)
+			background: #fff
+			padding: 45px 85px 40px 55px
 
+			@include media(1200px)
+				padding: 35px 65px 20px 35px
+
+			&--center
+				display: flex
+				align-items: center
+				flex-direction: column
+				justify-content: center
+				padding: 0 60px
+
+				@include media(400px)
+					padding: 0 30px
+
+
+.back-side
+	&__title
+		font-family: $desc-font	
+		@include rem(22)
+		margin-top: 0
+		color: $text-color
+		font-weight: normal
+
+		@include media(778px)
+			@include rem(20)
+
+		@include media(400px)
+			@include rem(18)
+
+	&__desc
+		margin-top: 30px
+		
+		@include media(1200px)
+			margin-top: 20px
+
+		@include media(400px)
+			@include rem(14)
+			margin-top: 15px
+
+		&--center
+			text-align: center
+
+
+	&__list
+		margin-top: 30px
+
+		@include media(1200px)
+			margin-top: 20px
+
+		@include media(400px)
+			margin-top: 15px
+
+	&__item
+		font-family: $desc-font
+		@include rem(16)
+		margin-top: 15px
+
+		@include media(400px)
+			@include rem(14)
+			margin-top: 10px
+		
+
+		&:before
+			content: ''
+			width: 11px
+			height: 2px
+			background: $acc-color
+			display: inline-block
+			margin-right: 10px
+			margin-bottom: 4px
